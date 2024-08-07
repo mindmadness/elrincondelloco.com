@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Rincón Del Loco</title>
+  <meta name="description" content="Foro sobre asesinos famosos y no tan famosos.">
+  <meta name="keywords" content="asesinos, foro, crímenes, historia">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: url('tu-imagen-de-fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #000000;
+      color: #ffffff; /* Blanco para mejor contraste */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #38ac02;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #38ac02;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 5px; /* Reduce el margen inferior */
+    }
+    p {
+      margin-top: 5px; /* Reduce el margen superior */
+    }
+    .cta {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .cta button {
+      background-color: #38ac02;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .testimonios {
+      margin-top: 20px;
+    }
+    .testimonios h2 {
+      color: #ff0000; /* Rojo brillante */
+    }
+    .testimonios p {
+      font-style: italic;
+    }
+    section {
+      display: none; /* Ocultar todas las secciones por defecto */
+    }
+    section.active {
+      display: block; /* Mostrar la sección activa */
+    }
+    article {
+      margin-top: 20px;
+    }
+    article h2 {
+      color: #ff0000; /* Rojo brillante */
+    }
+  </style>
+  <script>
+    function mostrarSeccion(seccionId) {
+      var secciones = document.querySelectorAll('section');
+      secciones.forEach(function(seccion) {
+        seccion.classList.remove('active');
+      });
+      document.getElementById(seccionId).classList.add('active');
+    }
+  </script>
+</head>
+<body onload="mostrarSeccion('inicio')">
+  <header>
+    <h1>El Rincón Del Loco</h1>
+    <nav>
+      <ul>
+        <li><a onclick="mostrarSeccion('inicio')">Inicio</a></li>
+        <li><a onclick="mostrarSeccion('contacto')">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="inicio" class="active">
+      <h1>Bienvenido a El Rincón Del Loco</h1>
+      <p>En este foro encontrarás archivos de asesinos famosos y otros no tan famosos...</p>
+      <div class="cta">
+        <button onclick="mostrarSeccion('articulos')">Explorar Artículos</button>
+      </div>
+      <div class="testimonios">
+        <h2>Testimonios</h2>
+        <p>"Un sitio fascinante para los interesados en la criminología."</p>
+        <p>"Información detallada y bien presentada."</p>
+      </div>
+    </section>
+    <section id="articulos">
+      <h1>Artículos</h1>
+      <!-- Aquí añadimos 7 artículos -->
+      <article>
+        <h2>Jack el Destripador</h2>
+        <img src="jack-el-destripador.jpg" alt="Jack el Destripador">
+        <p>Jack el Destripador fue un asesino en serie no identificado que actuó en el barrio londinense de Whitechapel en 1888.</p>
+      </article>
+      <article>
+        <h2>Ted Bundy</h2>
+        <img src="ted-bundy.jpg" alt="Ted Bundy">
+        <p>Ted Bundy fue un asesino en serie estadounidense que secuestró, violó y asesinó a numerosas mujeres jóvenes en la década de 1970.</p>
+      </article>
+      <article>
+        <h2>Jeffrey Dahmer</h2>
+        <img src="jeffrey-dahmer.jpg" alt="Jeffrey Dahmer">
+        <p>Jeffrey Dahmer, conocido como el Caníbal de Milwaukee, fue un asesino en serie y delincuente sexual estadounidense.</p>
+      </article>
+      <article>
+        <h2>John Wayne Gacy</h2>
+        <img src="john-wayne-gacy.jpg" alt="John Wayne Gacy">
+        <p>John Wayne Gacy, conocido como el Payaso Asesino, fue un asesino en serie estadounidense que violó y asesinó al menos a 33 jóvenes.</p>
+      </article>
+      <article>
+        <h2>Albert Fish</h2>
+        <img src="albert-fish.jpg" alt="Albert Fish">
+        <p>Albert Fish, cuyo nombre real era Hamilton Howard Fish, fue un asesino en serie y caníbal estadounidense.</p>
+      </article>
+      <article>
+        <h2>Andréi Chikatilo</h2>
+        <img src="andrei-chikatilo.jpg" alt="Andréi Chikatilo">
+        <p>Andréi Chikatilo, conocido como el Carnicero de Rostov, fue un asesino en serie soviético que asesinó a al menos 52 personas.</p>
+      </article>
+      <article>
+        <h2>Pedro Alonso López</h2>
+        <img src="pedro-alonso-lopez.jpg" alt="Pedro Alonso López">
+        <p>Pedro Alonso López, conocido como el Monstruo de los Andes, es un asesino en serie colombiano que confesó haber matado a más de 300 niñas.</p>
+      </article>
+    </section>
+    <section id="contacto">
+      <h1>Contacto</h1>
+      <p>Para más información, puedes contactarnos a través de nuestro correo electrónico: contacto@elrincondelloco.com</p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 El Rincón Del Loco</p>
+  </footer>
+</body>
+</html>
